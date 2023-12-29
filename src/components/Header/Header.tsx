@@ -10,8 +10,8 @@ const Header = () => {
       <div className='flex items-center w-full md:w-2/3'>
         <Link
           href={'/'}
-          className='font-black text-[#f27405]'>
-          Mestil Hotel
+          className='font-black text-tertiary-dark'>
+          Mestil
         </Link>
         <ul className='flex items-center ml-5'>
           <li className='flex items-center'>
