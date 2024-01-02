@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Hotel Management System
+
+A web application for managing hotel operations built with Next.js, React, CMS (Sanity.IO), Tailwind CSS, and integrated with Stripe for payment processing.
+
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Getting Started](#getting-started)
+- [Project Structure](#project-structure)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Introduction
+
+The Hotel Management System is designed to streamline hotel operations, providing a user-friendly interface for managing reservations, room inventory, customer information, and payment processing.
+
+## Features
+
+- **Reservation Management:** Easily manage reservations and room allocations.
+- **Room Inventory:** Keep track of room availability and status.
+- **Customer Information:** Store and access customer details for personalized service.
+- **Stripe Integration:** Seamlessly process payments through Stripe.
+- **Customizable Content:** Use Sanity.IO as a CMS for managing website content.
+
+## Tech Stack
+
+- [Next.js 14](https://nextjs.org/)
+- [React](https://reactjs.org/)
+- [Sanity.IO](https://www.sanity.io/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Stripe](https://stripe.com/)
 
 ## Getting Started
 
-First, run the development server:
+1. **Clone the repository:**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+   ```bash
+   git clone https://github.com/your-username/hotel-management-system.git
+   cd hotel-management-system
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Install dependencies:**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+   ```bash
+   npm install
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+3. **Configure Sanity.IO:**
 
-## Learn More
+   - Create an account on [Sanity.IO](https://www.sanity.io/) and set up a new project.
+   - Configure the project API keys in your Next.js environment.
 
-To learn more about Next.js, take a look at the following resources:
+4. **Configure Stripe:**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   - Create an account on [Stripe](https://stripe.com/) and obtain the necessary API keys.
+   - Configure the Stripe keys in your Next.js environment.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+5. **Run the application:**
 
-## Deploy on Vercel
+   ```bash
+   npm run dev
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   Visit [http://localhost:3000](http://localhost:3000) to view the application.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Project Structure
+
+- **`/pages`:** Next.js pages.
+- **`/components`:** React components.
+- **`/public`:** Static assets.
+- **`/sanity`:** Sanity.IO configuration files.
+- **`/styles`:** Tailwind CSS styles.
+
+## Contributing
+
+Contributions are welcome! Feel free to open issues and pull requests.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
