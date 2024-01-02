@@ -1,10 +1,14 @@
-/** @format */
+'use client';
 
+import React, { useContext } from 'react';
 import Link from 'next/link';
 import { FaUserCircle } from 'react-icons/fa';
-import { MdDarkMode } from 'react-icons/md';
+import { MdDarkMode, MdOutlineLightMode } from 'react-icons/md';
+import ThemeContext from '@/context/themeContext';
 
 const Header = () => {
+
+  const {theme,  setTheme} = useContext(ThemeContext);
   return (
     <header className='py-10 px-4 container mx-auto text-xl flex flex-wrap md:flex-nowrap justify-between items-center'>
       <div className='flex items-center w-full md:w-2/3'>
@@ -20,7 +24,19 @@ const Header = () => {
             </Link>
           </li>
           <li className='ml-2'>
-            <MdDarkMode className='cursor-pointer' />
+            {theme ? 
+            <MdOutlineLightMode
+            onClick={() => {
+              setTheme(false);
+              localStorage.removeItem('theme')
+            }}
+            className='cursor-pointer' /> : 
+            <MdDarkMode
+            onClick={() => {
+              setTheme(true);
+              localStorage.setItem('theme', 'true')
+            }}
+            className="cursor-pointer" />}
           </li>
         </ul>
       </div>
