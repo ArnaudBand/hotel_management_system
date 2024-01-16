@@ -5,17 +5,16 @@ import React, { useState, useEffect } from "react";
 import ThemeContext from "@/context/themeContext";
 
 const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
-  const themeFromLocalStorage: boolean =
-    typeof localStorage !== "undefined" && localStorage.getItem("theme")
-      ? JSON.parse(localStorage.getItem("theme")!)
-      : false;
+  const themeFromLocalStorage: boolean | string | null =
+    typeof localStorage !== "undefined" && localStorage.getItem("theme");
 
-  const [theme, setTheme] = useState<boolean>(themeFromLocalStorage);
-
-  const [renderTheme, setRenderTheme] = useState<boolean>(false);
+  const [theme, setTheme] = useState<boolean>(
+    themeFromLocalStorage ? themeFromLocalStorage === "true" : false
+  );
 
   useEffect(() => {
-    setRenderTheme(true);
+    const storedTheme = themeFromLocalStorage !== null ? themeFromLocalStorage === "true" : null;
+    setTheme(storedTheme !== null ? storedTheme : false);
   }, []);
 
   return (
