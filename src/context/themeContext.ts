@@ -7,6 +7,6 @@ type themeContextType = {
   setTheme: Dispatch<SetStateAction<boolean>>;
 };
 
-const ThemeContext = createContext<themeContextType>({ theme: false, setTheme: () => {} });
+const ThemeContext = createContext<themeContextType>({ theme: false, setTheme: () => null });
 
 export default ThemeContext;
