@@ -23,18 +23,11 @@ const Auth = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      const res = await fetch("/api/auth/signup", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-      const data = await res.json();
-      console.log(data);
+      console.log(formData);
     } catch (error) {
       console.log(error);
     } finally {
+      setFormData(defaultInput);
     }
   };
   return (
