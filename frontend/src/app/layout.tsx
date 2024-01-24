@@ -26,10 +26,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <main className='font-normal'>
+        <main className="font-normal">
           <ThemeProvider>
             <Header />
-              {children}
+            {children}
             <Footer />
           </ThemeProvider>
         </main>
